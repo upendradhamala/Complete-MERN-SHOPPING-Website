@@ -167,8 +167,9 @@ export const deleteUser = (id) => async (dispatch, getState) => {
 }
 export const logout = () => (dispatch) => {
   dispatch({ type: USER_LOGOUT })
-
   localStorage.removeItem('userInformation')
+  window.location.reload()
+
 }
 
 // GET USER DETAILS
